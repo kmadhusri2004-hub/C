@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float P, R, SI, CI;
+    int N;
+    char choice;
+
+    
+    scanf("%f", &P);  
+    scanf("%f", &R);   
+    scanf("%d", &N);   
+    scanf(" %c", &choice); // Choice ('S' or 'C')
+
+    if (choice == 'S' || choice == 's') {
+        
+        SI = (P * N * R) / 100;
+        printf("%.2f\n", SI);
+    } 
+    else if (choice == 'C' || choice == 'c') {
+       
+        CI = P * (pow((1 + R / 100), N)) - P;
+        printf("%.2f\n", CI);
+    } 
+    else {
+        
+        printf("Invalid choice\n");
+    }
+    
+    
+
+       
+    return 0;
+}
