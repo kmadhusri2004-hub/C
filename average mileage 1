@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    double X, Y, Z;
+    double litres, mileage, cost_per_km;
+    
+
+    scanf("%lf", &X);
+    scanf("%lf", &Y);
+    scanf("%lf", &Z);
+
+   
+    litres = X / Y;              
+    mileage = Z / litres;
+    cost_per_km = X / Z;        
+
+
+    printf("Mileage : %07.2f\n", mileage);
+    printf("Cost/KM : %07.2f\n", cost_per_km);
+
+    return 0;
+}
