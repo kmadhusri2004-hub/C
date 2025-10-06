@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int units;
+    float amount = 0.0;
+
+    
+    scanf("%d", &units);
+
+    if (units < 0) {
+        printf("Invalid input\n");
+        return 0;
+    }
+
+    if (units <= 100) {
+        amount = 0;  // Free
+    }
+    else if (units <= 200) {
+        amount = (units - 100) * 1.5 + 20;
+    }
+    else if (units <= 500) {
+        if (units <= 200)
+            amount = (units - 100) * 2 + 30;
+        else
+            amount = (100 * 2) + (units - 200) * 3 + 30;
+    }
+    else {  
+        amount = (100 * 3.5) + (300 * 4.6) + (units - 500) * 6.6 + 50;
+    }
+
+    printf("%.2f\n", amount);
+
+    return 0;
+}
+                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
